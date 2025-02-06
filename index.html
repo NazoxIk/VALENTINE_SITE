@@ -8,6 +8,7 @@
   <meta name="CocoaVersion" content="2575.2">
   <style type="text/css">
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
   </style>
 </head>
 <body>
@@ -16,7 +17,7 @@
 <p class="p1">&lt;head&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;С Днем Валентина!&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Валентинка&lt;/title&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>body {</p>
 <p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
@@ -28,14 +29,47 @@
 <p class="p1"><span class="Apple-converted-space">            </span>background-color: pink;</p>
 <p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: red;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.buttons {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#yes {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: red;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#no {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: gray;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
 <p class="p1">&lt;/head&gt;</p>
 <p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;💖 Ура! Ты моя валентинка! 💖&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Ты сделал(-а) меня самым счастливым человеком!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Хочешь ли ты быть моей валентинкой? 💖&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="buttons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="yes" onclick="location.href='valentine_message.html'"&gt;Да&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="no"&gt;Нет&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const noButton = document.getElementById('no');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const initialX = noButton.offsetLeft;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const initialY = noButton.offsetTop;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>noButton.addEventListener('mouseover', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const offsetX = (Math.random() - 0.5) * 400;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const offsetY = (Math.random() - 0.5) * 200;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>noButton.style.left = `${initialX + offsetX}px`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>noButton.style.top = `${initialY + offsetY}px`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
 <p class="p1">&lt;/body&gt;</p>
 <p class="p1">&lt;/html&gt;</p>
 </body>
